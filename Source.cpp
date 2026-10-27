@@ -38,13 +38,32 @@ int main()
         switch (menuChoice)
         {
         case DEPOSIT:
-            /* 
+        cout << "You selected to make a deposit. Enter the amount:" << endl;
+        double depositAmount;
+        cin >> depositAmount;
+        if (isAmountValid(depositAmount)) {
+            account.deposit(depositAmount);
+            cout << "Deposit of $" << depositAmount << " has been added to the account." << endl;
+        } else {
+            cout << "Invalid deposit amount. Please enter a positive value." << endl;
+        }
+            /*
+            account.
             TODO: Gather the deposit amount input and validate it is > 0.
             Add the code that interacts with the account object to add
             a deposit to the account.
             */
             break;
         case WITHDRAWAL:
+        cout << "You selected to make a withdrawal. Enter the amount:" << endl;
+        double withdrawalAmount;
+        cin >> withdrawalAmount;
+        if (isAmountValid(withdrawalAmount)) {
+            account.withdraw(withdrawalAmount);
+            cout << "Withdrawal of $" << withdrawalAmount << " has been taken from your account." << endl;
+        } else {
+            cout << "Invalid withdrawal amount. Please enter a positive value." << endl;
+        }
             /*
             TODO: Gather the withdrawal amount input and validate it is > 0.
             Add the code that interacts with the account object to add
