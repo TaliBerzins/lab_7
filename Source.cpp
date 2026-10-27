@@ -43,9 +43,9 @@ int main()
         cin >> depositAmount;
         if (isAmountValid(depositAmount)) {
             account.deposit(depositAmount);
-            cout << "Deposit of $" << depositAmount << " has been added to the account." << endl;
+            cout<< "Deposit of $" << depositAmount << " has been added to the account." << endl;
         } else {
-            cout << "Invalid deposit amount. Please enter a positive value." << endl;
+            cout << "Invalid deposit amount. Please enter a positive value next time." << endl;
         }
             /*
             account.
@@ -60,9 +60,9 @@ int main()
         cin >> withdrawalAmount;
         if (isAmountValid(withdrawalAmount)) {
             account.withdraw(withdrawalAmount);
-            cout << "Withdrawal of $" << withdrawalAmount << " has been taken from your account." << endl;
+            cout<< "Withdrawal of $" << withdrawalAmount << " has been removed from your account." << endl;
         } else {
-            cout << "Invalid withdrawal amount. Please enter a positive value." << endl;
+            cout << "Invalid withdrawal amount. Please enter a positive value next time." << endl;
         }
             /*
             TODO: Gather the withdrawal amount input and validate it is > 0.
@@ -71,6 +71,7 @@ int main()
             */
             break;
         case CLOSE_OF_BUSINESS:
+            account.closeOfBusiness();
             /*
             TODO: Add the code that interacts with the account object to perform
             the close of business account balancing.
