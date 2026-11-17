@@ -1,3 +1,9 @@
+/**
+ * @file Customer.cpp
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The implementation file for the customer class.
+ */
 #include "Customer.h"
 #include <iostream>
 using namespace std;

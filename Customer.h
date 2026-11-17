@@ -1,3 +1,9 @@
+/**
+ * @file Customer.h
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The header file for the customer class.
+*/
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 

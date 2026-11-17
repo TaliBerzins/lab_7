@@ -1,3 +1,9 @@
+/**
+ * @file Account.h
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The header file for the account class.
+ */
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 

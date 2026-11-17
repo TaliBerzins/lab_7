@@ -1,3 +1,9 @@
+/**
+ * @file Account.cpp
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The implementation file for the account class.
+ */
 #include "Account.h"
 #include <iostream>
 #include <numeric> // for accumulate

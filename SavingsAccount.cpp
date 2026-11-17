@@ -1,9 +1,20 @@
+/**
+ * @file SavingsAccount.cpp
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The implementation file for the savings account class.
+ */
 using namespace std;
 #include <iostream>
 #include "SavingsAccount.h"
 #include <numeric> // for accumulate
 
-
+/**
+ * @brief This function will iterate deposits and withdrawals and update the balance
+ * available in the account. It will also apply the interest rate to the new balance. It override
+ *  the base class closeOfBusiness function.
+ * @return Void.
+ */
 void SavingsAccount::closeOfBusiness() {
     double totalDeposits = accumulate(deposits.begin(), deposits.end(), 0.0);
     double totalWithdrawals = accumulate(withdrawals.begin(), withdrawals.end(), 0.0);
@@ -20,6 +31,12 @@ void SavingsAccount::closeOfBusiness() {
 
 }
 
+
+/**
+ * @brief This function will print the account information including the account number, current balance, interest rate, and customer information.
+ *  It override the base class printAccountInfo function. 
+ * @return Void.
+ */
 void SavingsAccount::printAccountInfo() const {
     cout << "Account Number: " << accountNumber << endl;
     cout << "Current Balance: $" << balance << endl;

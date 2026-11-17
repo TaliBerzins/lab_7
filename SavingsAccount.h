@@ -1,3 +1,9 @@
+/**
+ * @file SavingsAccount.h
+ * @author Tali Berzins
+ * @date 2026-11-17
+ * @brief The header file for the savings account class. This class inherits from the Account class and adds an interest rate to the account.
+ */
 #ifndef SAVINGS_ACCOUNT_H
 #define SAVINGS_ACCOUNT_H
 
