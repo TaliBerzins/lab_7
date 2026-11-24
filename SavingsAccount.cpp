@@ -8,6 +8,9 @@ using namespace std;
 #include <iostream>
 #include "SavingsAccount.h"
 #include <numeric> // for accumulate
+#include <fstream>
+#include <unistd.h>
+
 
 /**
  * @brief This function will iterate deposits and withdrawals and update the balance
@@ -15,6 +18,20 @@ using namespace std;
  *  the base class closeOfBusiness function.
  * @return Void.
  */
+std::ofstream outFile("account_data.txt");
+
+
+void SavingsAccount::saveToFile() const {
+    if (outFile.is_open()) {
+            outFile << "Account Number: " << accountNumber << endl;
+            outFile << "Current Balance: " << balance << endl;
+            outFile << "Account Number: " << interestRate << endl;
+            outFile.close();
+            } else {
+        std::cerr << "Error opening file for writing.\n";
+    }
+    
+};
 void SavingsAccount::closeOfBusiness() {
     double totalDeposits = accumulate(deposits.begin(), deposits.end(), 0.0);
     double totalWithdrawals = accumulate(withdrawals.begin(), withdrawals.end(), 0.0);

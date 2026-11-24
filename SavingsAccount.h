@@ -19,6 +19,7 @@ public:
     SavingsAccount(const string& accNum, double initialBalance, const Customer& customer) : Account(accNum, initialBalance, customer), interestRate(0.05) {}
      void closeOfBusiness() override;
      void printAccountInfo() const override;
+     void saveToFile() const ;
 
 };
 

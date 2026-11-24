@@ -7,6 +7,7 @@
  
 #include<iostream>
 #include "SavingsAccount.h"
+#include <fstream>
 
 void printMenu();
 int getMenuOption();
@@ -20,6 +21,7 @@ const int CLOSE_OF_BUSINESS = 3;
 const int QUIT = 4;
 
 
+
 /**
  * @brief Entry point for the banking application.
  * @return 0 to indicate success.
@@ -30,7 +32,7 @@ int main()
     // just use dummy data for now for the customer and the account
     // we care about interacting with account object for this lab
     Customer customer("0123456789", "customer@cscc.edu");
-    Account* account = new SavingsAccount("5423678409", 100.00, customer);
+    SavingsAccount* account = new SavingsAccount("5423678409", 100.00, customer);
     account->printAccountInfo();
 
     int menuChoice = getMenuOption();
@@ -73,10 +75,8 @@ int main()
             break;
         case CLOSE_OF_BUSINESS:
             account->closeOfBusiness();
-            /*
-            TODO: Add the code that interacts with the account object to perform
-            the close of business account balancing.
-            */
+            account->saveToFile(); 
+
             break;
         }
 
